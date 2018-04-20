@@ -1,0 +1,15 @@
+<h1 class="title">
+  <%= @issue.title %><br>
+</h1>
+
+<p class="date">
+  <i>Submitted <%= time_ago_in_words(@issue.created_at) %> Ago</i>
+</p>
+
+<p>
+  <%= @issue.description %><br>
+</p>
+
+<p>
+  <%= @issue.solution %><br>
+</p>

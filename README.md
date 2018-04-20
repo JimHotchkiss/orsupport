@@ -1,24 +1,6 @@
-# README
+# OR Support application
+*Want user to be able to sign in, read Issues and Solutions, enter new Issues and its Solution, edit and delete said entries, make comments on entries, edit and delete their comment.*
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Create Issue: Need routes, controller and view ~> rails g resource Issue title:string description:text solution:text
+2. We want to be able to create a new Issue ~> controller (model: method, controller: action)
+  *Need to add a form for users to enter their issue. Going to use Rails' 'form_for'
