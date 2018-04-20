@@ -1,1 +1,7 @@
-<h2>Issues Index View</h2>
+<% @issues.each do |issue|%>
+<div class="post_wrapper">
+  <h2 class="title"> <%= link_to issue.title, issue %></h2>
+  <p class="date"> <%= issue.created_at.strftime("%B, %d, %Y") %> </p> 
+</div>
+
+<% end %>
