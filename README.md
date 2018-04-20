@@ -7,4 +7,6 @@
   Also, in the form, added a 'time submitted' feature w/ time_ago_in_words(@issue.created_at)
 
   I also used the link_to, declaring the path: link_to issue.title, issue
-  Also, used, on the index page, a create_at feature 
+  Also, used, on the index page, a create_at feature*
+
+3. Now, what I think I want to do is figure out how to divide issues up based on components.  Example, if a user is having issues with the SDC3, we want them to be able to link to the SDC3.  
