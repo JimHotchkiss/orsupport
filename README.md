@@ -9,4 +9,4 @@
   I also used the link_to, declaring the path: link_to issue.title, issue
   Also, used, on the index page, a create_at feature*
 
-3. Now, what I think I want to do is figure out how to divide issues up based on components.  Example, if a user is having issues with the SDC3, we want them to be able to link to the SDC3.  
+3. Now, I want the user to be able to search issues by component.  For example, I want to the user to be able to click on "SDC3" or "Monitor" ect.  I have found a video, on Learn, that will assist with the checkboxes and the associations.  Rails > Associations and Rails > Video Review: Has Many Through, starting @ 13:00  
