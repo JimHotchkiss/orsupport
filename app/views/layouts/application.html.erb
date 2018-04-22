@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -18,6 +19,7 @@
         <li> <%= link_to "Monitors" %></li>
         <li> <%= link_to "Helpful Links" %></li>
       </ul>
+      <p class="sign_in">Admin login</p>
     </div>
     <%= yield %>
   </body>

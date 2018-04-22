@@ -17,6 +17,10 @@
   </p>
 
   <p>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+  </p>
+
+  <p>
     <%= f.submit %>
   </p>
 <% end %>
