@@ -27,4 +27,6 @@ application.scss:
  *
  *= require_tree .
  *= require_self
- */   
+ */  
+
+ *Problem with server, "server already running".  Fix, per stackoverflow: kill -9 $(lsof -i tcp:3000 -t) 

@@ -1,7 +1,11 @@
+
+<div id="index_wrapper">
+  <h2 class="index_title">Most Recent Contributions:</h2>
+</div>
 <% @issues.each do |issue|%>
 <div class="post_wrapper">
   <h2 class="title"> <%= link_to issue.title, issue %></h2>
-  <p class="date"> <%= issue.created_at.strftime("%B, %d, %Y") %> </p> 
+  <p class="date_and_author"> <%= issue.created_at.strftime("%B, %d, %Y") %> </p>
 </div>
 
 <% end %>

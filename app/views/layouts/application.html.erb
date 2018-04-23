@@ -24,12 +24,16 @@
 
       <div id="main_content">
         <div id="header">
-          <p>All Posts</p>
+          <p> <%= link_to 'All Posts', issues_path %></p>
           <div class="buttons">
-            <button class="button"> <%= link_to "New Post", new_issue_path %></button>
+            <button class="button"> <%= link_to "New Issue", new_issue_path %></button>
           </div>
         </div>
+
+        <div class="container">
+          <%= yield %>
+        </div>
+
       </div>
-    <%= yield %>
   </body>
 </html>
