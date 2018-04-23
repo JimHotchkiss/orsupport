@@ -17,14 +17,13 @@
         <li> <%= link_to "Light Source" %></li>
         <li> <%= link_to "Insaflator" %></li>
         <li> <%= link_to "Monitors" %></li>
-        <li> <%= link_to "Helpful Links" %></li>
       </ul>
-      <p class="sign_in">Admin login</p>
+      <p class="sign_in"> <%= link_to "Admin login"%></p><br>
     </div>
-
       <div id="main_content">
         <div id="header">
           <p> <%= link_to 'Home', issues_path %></p>
+          <p> <%= link_to 'SOW' %></p>
           <div class="buttons">
             <button class="button"> <%= link_to "New Issue", new_issue_path %></button>
           </div>
