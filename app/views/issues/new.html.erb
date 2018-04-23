@@ -16,6 +16,15 @@
       <%= f.text_area :solution %>
     </p>
 
+    <%= f.label :categories %><br>
+    <% Category.all.each do |category|%>
+    <p>
+      <label for="category_id <%= category.id %>"><%= category.name %></label>
+      <input type="checkbox" name="issue[category_ids][]" value="<%= category.id %>" id>
+
+    </p>
+    <% end %>
+
     <p>
       <%= f.submit %>
     </p>

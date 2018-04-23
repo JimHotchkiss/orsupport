@@ -1,0 +1,24 @@
+<div id="index_wrapper">
+  <h2 class="index_title"><%= @category.name %></h2>
+</div>
+
+<% @category.issues.each do |issue|%>
+<div class="post_wrapper">
+  <h2 class="title"> <%= link_to issue.title, issue %></h2><br>
+
+  <p class="date">
+    <i>Submitted <%= time_ago_in_words(issue.created_at) %> Ago</i>
+  </p>
+
+  <h2>Issue</h2>
+  <p>
+    <%= issue.description %><br>
+  </p>
+
+  <h2>Solution</h2>
+  <p>
+    <%= issue.solution %><br>
+  </p>
+</div>
+
+<% end %>
