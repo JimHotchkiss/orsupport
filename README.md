@@ -29,6 +29,11 @@ application.scss:
  *= require_self
  */  
 
- *Problem with server, "server already running".  Fix, per stackoverflow: kill -9 $(lsof -i tcp:3000 -t) *
+ *Problem with server, "server already running".  Fix, per stackoverflow: kill -9 $(lsof -i tcp:3000 -t)*
 
  Going to merge the styling branch with the master branch.
+
+ # Going to work on validations, so user cannot submit empty issue
+  *we added validations to the Issue model, then we put in an if-statement in the issues-controller and now we are going to add some error messages to the issue-form*
+
+    ~ Validations are working with the exception of the checkboxes.  

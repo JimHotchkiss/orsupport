@@ -2,7 +2,7 @@
   <h2 class="index_title"><%= @category.name %></h2>
 </div>
 
-<% @category.issues.each do |issue|%>
+<% @category.issues.order('created_at DESC').each do |issue|%>
 <div class="post_wrapper">
   <h2 class="title"> <%= link_to issue.title, issue %></h2><br>
 
