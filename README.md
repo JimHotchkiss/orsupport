@@ -36,4 +36,5 @@ application.scss:
  # Going to work on validations, so user cannot submit empty issue
   *we added validations to the Issue model, then we put in an if-statement in the issues-controller and now we are going to add some error messages to the issue-form*
 
-    ~ Validations are working with the exception of the checkboxes.  
+    ~ Validations are working with the exception of the checkboxes.
+    *Perhaps, I can write a method, in the Issue model, where I use params[:issue][:category_ids].empty? to write a method that I can then call in my validation of the checkboxes. * 
