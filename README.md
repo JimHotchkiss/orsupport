@@ -29,4 +29,6 @@ application.scss:
  *= require_self
  */  
 
- *Problem with server, "server already running".  Fix, per stackoverflow: kill -9 $(lsof -i tcp:3000 -t) 
+ *Problem with server, "server already running".  Fix, per stackoverflow: kill -9 $(lsof -i tcp:3000 -t) *
+
+ Going to merge the styling branch with the master branch.

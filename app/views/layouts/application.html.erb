@@ -11,7 +11,6 @@
 
   <body>
     <div id="sidebar">
-
       <% Category.all.each do |category| %>
       <ul>
         <li> <%= link_to category.name, category_path(category) %></li>
