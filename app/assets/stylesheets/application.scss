@@ -117,6 +117,9 @@ a {
 		a {
 			color: #9eafba;
 			text-decoration: none;
+			&:hover {
+				color: #33acb7;
+			}
 		}
 		.buttons {
 			float: right;
