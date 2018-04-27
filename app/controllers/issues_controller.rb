@@ -28,12 +28,16 @@ class IssuesController < ApplicationController
 
   def update
     find_issue
-
     if @issue.update(params[:issue].permit(:title, :description, :solution, :category_ids => []))
       redirect_to @issue
     else
       render 'edit'
-    end 
+    end
+  end
+
+  def destroy
+    find_issue.destroy
+    redirect_to issues_path
   end
 
   private

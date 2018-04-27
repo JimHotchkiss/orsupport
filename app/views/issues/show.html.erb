@@ -5,6 +5,7 @@
 <p class="date">
   <i>Submitted <%= time_ago_in_words(@issue.created_at) %> Ago</i>
   | <%= link_to 'Edit', edit_issue_path(@issue) %>
+  | <%= link_to 'Delete', @issue, method: :delete, data: {confirm: 'Are you sure?'} %>
 </p>
 
 <h2>Issue</h2>

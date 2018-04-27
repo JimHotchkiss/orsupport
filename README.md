@@ -37,4 +37,13 @@ application.scss:
   *we added validations to the Issue model, then we put in an if-statement in the issues-controller and now we are going to add some error messages to the issue-form*
 
     ~ Validations are working with the exception of the checkboxes.
-    *Perhaps, I can write a method, in the Issue model, where I use params[:issue][:category_ids].empty? to write a method that I can then call in my validation of the checkboxes. * 
+    *Perhaps, I can write a method, in the Issue model, where I use params[:issue][:category_ids].empty? to write a method that I can then call in my validation of the checkboxes. *
+
+    validate :category_cannont_be_blank
+
+    def category_cannont_be_blank
+
+      if category_ids.empty?
+        errors.add(:category_ids, "One of the Checkboxes must be accpeted")
+      end
+    end
