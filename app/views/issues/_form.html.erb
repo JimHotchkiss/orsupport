@@ -1,0 +1,39 @@
+<%= form_for @issue do |f| %>
+  <% if @issue.errors.any? %>
+    <div id="errors">
+      <h2><%= pluralize(@issue.errors.count, "errors") %> prevented this issue from saving </h2>
+      <ul>
+        <%= @issue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description%>
+  </p>
+
+  <p>
+    <%= f.label :solution %><br>
+    <%= f.text_area :solution %>
+  </p>
+
+  <%= f.label :categories %><br>
+  <% Category.all.each do |category|%>
+  <p>
+    <label for="category_id <%= category.id %>"><%= category.name %></label>
+    <input type="checkbox" name="issue[category_ids][]" value="<%= category.id %>" id>
+
+  </p>
+  <% end %>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

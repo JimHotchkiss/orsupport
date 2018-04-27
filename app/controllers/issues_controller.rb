@@ -1,4 +1,5 @@
 class IssuesController < ApplicationController
+  include IssuesHelper
 
   def index
     @issues = Issue.all.order('created_at DESC').limit(5)
@@ -18,9 +19,22 @@ class IssuesController < ApplicationController
   end
 
   def show
-    @issue = Issue.find(params[:id])
+    find_issue
   end
 
+  def edit
+    find_issue
+  end
+
+  def update
+    find_issue
+
+    if @issue.update(params[:issue].permit(:title, :description, :solution, :category_ids => []))
+      redirect_to @issue
+    else
+      render 'edit'
+    end 
+  end
 
   private
   def issue_params
