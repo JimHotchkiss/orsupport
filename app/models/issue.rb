@@ -1,7 +1,7 @@
 class Issue < ApplicationRecord
   has_many :category_issues
   has_many :categories, through: :category_issues
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   validates :title, presence: true
   validates :description, presence: true, length: {maximum: 150}
