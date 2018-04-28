@@ -1,19 +1,29 @@
-<h1 class="title">
-  <%= @issue.title %><br>
-</h1>
+<div id="post_content">
+  <h1 class="title">
+    <%= @issue.title %><br>
+  </h1>
 
-<p class="date">
-  <i>Submitted <%= time_ago_in_words(@issue.created_at) %> Ago</i>
-  | <%= link_to 'Edit', edit_issue_path(@issue) %>
-  | <%= link_to 'Delete', @issue, method: :delete, data: {confirm: 'Are you sure?'} %>
-</p>
+  <p class="date">
+    <i>Submitted <%= time_ago_in_words(@issue.created_at) %> Ago</i>
+    | <%= link_to 'Edit', edit_issue_path(@issue) %>
+    | <%= link_to 'Delete', @issue, method: :delete, data: {confirm: 'Are you sure?'} %>
+  </p>
 
-<h2>Issue</h2>
-<p>
-  <%= @issue.description %><br>
-</p>
+  <div class="body">
+    <h2>Issue</h2>
+    <p class="body">
+      <%= @issue.description %><br>
+    </p>
+    <h2>Solution</h2>
+    <p>
+      <%= @issue.solution %><br>
+    </p>
 
-<h2>Solution</h2>
-<p>
-  <%= @issue.solution %><br>
-</p>
+    <div id="comments">
+      <h2> <%= pluralize(@issue.comments.count, "comment") %></h2>
+      <%= render @issue.comments %>
+      <h3>Add Comment:</h3>
+        <%= render 'comments/form' %>
+    </div>
+  </div>
+</div>
