@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def create
     new_user
     @user.email = params[:user][:email]
+    @user.password = params[:user][:password]
     if @user.save
       session[:user_id] = @user.id
       redirect_to issues_path

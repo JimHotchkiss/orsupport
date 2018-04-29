@@ -13,9 +13,13 @@
 	    </div>
 	  <% end %>
   <div>
-    <%= f.label :email %>
+    <%= f.label :email %><br>
     <%= f.text_field :email, :placeholder => "Your Email" %>
   </div><br>
+	<div>
+		<%= f.label :password %><br>
+    <%= f.password_field :password, :placeholder => "Choose a password" %>
+	</div><br>
   <div>
     <%= f.submit "Register" %>
   </div>

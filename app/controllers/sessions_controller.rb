@@ -5,9 +5,13 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by(:email => params[:email])
-    binding.pry
-    session[:user_id] = @user.id
-    redirect_to issues_path
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      redirect_to issues_path
+    else
+      flash[:error] = "Please check your email or password"
+      render 'sessions/new'
+    end
   end
 
   def destroy
