@@ -1,4 +1,5 @@
 class IssuesController < ApplicationController
+  before_action :authentication_required
   include IssuesHelper
 
   def index

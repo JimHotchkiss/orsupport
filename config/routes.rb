@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
   root "categories#index"
+
+  get '/login' => "sessions#new"
+  post '/sessions' => "sessions#create"
+  get '/logout' => "sessions#destroy"
+
   resources :categories
   resources :users, :only => [:new, :create]
 

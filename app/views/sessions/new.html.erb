@@ -1,0 +1,12 @@
+
+<div id="page_wrapper">
+	<h2>Login</h2>
+    <%= form_tag(sessions_path) do %>
+    <div>
+      <%= text_field_tag :email, nil, placeholder: "Your Email Here" %>
+    </div><br>
+    <div>
+      <%= submit_tag "login" %>
+    </div>
+    <% end %>
+</div>
