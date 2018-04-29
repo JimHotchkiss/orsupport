@@ -16,7 +16,9 @@
         <li> <%= link_to category.name, category_path(category) %></li>
       </ul>
       <% end %>
-      <p class="sign_in"> <%= link_to "Admin login"%></p><br>
+      <div>
+        <p class="sign_in"> <%= link_to "Admin login"%></p>
+      </div>
     </div>
       <div id="main_content">
         <div id="header">
@@ -24,6 +26,7 @@
           <p> <%= link_to 'SOW' %></p>
           <div class="buttons">
             <button class="button"> <%= link_to "New Issue", new_issue_path %></button>
+            <button class="button"> <%= link_to "LogOut" %></button>
           </div>
         </div>
 

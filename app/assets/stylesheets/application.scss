@@ -225,6 +225,9 @@ a {
 	}
 	#page_wrapper {
 		padding: 3em;
+		::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #33acb7;
+	}
 		#profile_image {
 			width: 300px;
 			float: left;

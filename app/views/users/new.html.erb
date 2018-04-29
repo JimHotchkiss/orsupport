@@ -1,0 +1,18 @@
+
+<div id="page_wrapper">
+	<h2>Register</h2>
+  <%= form_for(@user) do |f| %>
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email, :placeholder => "Your Email" %>
+  </div><br>
+  <div>
+    <%= f.submit "Register" %>
+  </div>
+  <% end %>
+
+
+  </form>
+
+
+</div>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root "categories#index"
   resources :categories
+  resources :users, :only => [:new, :create]
 
   resources :issues do
     resources :comments
