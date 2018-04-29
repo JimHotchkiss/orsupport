@@ -1,9 +1,9 @@
 <%= form_for @issue do |f| %>
   <% if @issue.errors.any? %>
     <div id="errors">
-      <h2><%= pluralize(@issue.errors.count, "errors") %> prevented this issue from saving </h2>
+      <h2><%pluralize(@issue.errors.count, "errors") %> prevented this issue from saving </h2>
       <ul>
-        <%= @issue.errors.full_messages.each do |message| %>
+        <% @issue.errors.full_messages.each do |message| %>
         <li><%= message %></li>
         <% end %>
       </ul>

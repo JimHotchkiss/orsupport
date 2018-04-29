@@ -2,6 +2,16 @@
 <div id="page_wrapper">
 	<h2>Register</h2>
   <%= form_for(@user) do |f| %>
+		<% if @user.errors.any? %>
+	    <div id="errors">
+	      <h2><%= pluralize(@user.errors.count, "error") %> prevented this issue from saving </h2>
+	      <ul>
+	        <% @user.errors.full_messages.each do |message| %>
+		        <li><%= message %></li>
+	        <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
   <div>
     <%= f.label :email %>
     <%= f.text_field :email, :placeholder => "Your Email" %>
@@ -10,9 +20,4 @@
     <%= f.submit "Register" %>
   </div>
   <% end %>
-
-
-  </form>
-
-
 </div>

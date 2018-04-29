@@ -8,8 +8,10 @@ class UsersController < ApplicationController
   def create
     new_user
     @user.email = params[:user][:email]
-    @user.save
-
-    redirect_to issues_path
+    if @user.save
+      redirect_to issues_path
+    else
+      render 'users/new'
+    end
   end
 end
