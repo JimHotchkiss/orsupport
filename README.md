@@ -47,3 +47,6 @@ application.scss:
         errors.add(:category_ids, "One of the Checkboxes must be accpeted")
       end
     end
+
+    Created new github branch, git checkout -b login
+    
