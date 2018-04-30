@@ -286,7 +286,7 @@ a {
 }
 
 @media screen and (max-width: 600px) {
-	#main_content {
-		width: 100%;
+	#sidebar {
+		max-width: 100px;
 	}
 }
