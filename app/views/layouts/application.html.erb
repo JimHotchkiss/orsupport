@@ -11,11 +11,20 @@
 
   <body>
     <div id="sidebar">
-      <% Category.all.each do |category| %>
-      <ul>
-        <li> <%= link_to category.name, category_path(category) %></li>
-      </ul>
-      <% end %>
+
+        <% if logged_in? %>
+          <% Category.all.each do |category| %>
+            <ul>
+              <li> <%= link_to category.name, category_path(category) %></li>
+            </ul>
+            <% end %>
+          <% else %>
+            <% Category.all.each do |category| %>
+              <ul>
+                <li> <%= category.name %></li>
+              </ul>
+          <% end %>
+        <% end %>
       <div>
         <p class="sign_in"> <%= link_to "Admin login"%></p>
       </div>
