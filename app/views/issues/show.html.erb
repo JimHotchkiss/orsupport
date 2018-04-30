@@ -6,8 +6,10 @@
   <p class="date">
     <i>Submitted <%= time_ago_in_words(@issue.created_at) %> Ago</i>
     <i>By <%= User.find_by(id: @issue.user_id).email %></i>
-    | <%= link_to 'Edit', edit_issue_path(@issue) %>
-    | <%= link_to 'Delete', @issue, method: :delete, data: {confirm: 'Are you sure?'} %>
+    <% if @issue.user_id == current_user.id %>
+      | <%= link_to 'Edit', edit_issue_path(@issue) %>
+      | <%= link_to 'Delete', @issue, method: :delete, data: {confirm: 'Are you sure?'} %>
+    <% end %>
   </p>
 
   <div class="body">
