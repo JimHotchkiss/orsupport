@@ -6,5 +6,6 @@
   <div class="post_wrapper">
     <h2 class="title"> <%= link_to issue.title, issue %></h2>
     <p class="date_and_author"> <%= issue.created_at.strftime("%B, %d, %Y") %> </p>
+    <p class="date_and_author">by <%= User.find_by(id: issue.user_id).email %> </p>
   </div>
 <% end %>
