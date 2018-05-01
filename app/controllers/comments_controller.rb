@@ -3,8 +3,9 @@ class CommentsController < ApplicationController
 
   def create
     find_issue
-    @comment = @issue.comments.create(params[:comment].permit(:name, :body))
 
+    @comment = @issue.comments.create(params[:comment].permit(:name, :body))
+    comment_user
     redirect_to issue_path(@issue)
   end
 

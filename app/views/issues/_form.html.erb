@@ -16,15 +16,15 @@
 
   <p>
     <%= f.label :description %><br>
-    <%= f.text_area :description%>
+    <%= f.text_area :description, :placeholder => "Issue Description"%>
   </p>
 
   <p>
     <%= f.label :solution %><br>
-    <%= f.text_area :solution %>
+    <%= f.text_area :solution, :placeholder => "Your Solution" %>
   </p>
 
-  <%= f.label :categories %><br>
+  <%= f.label :categories %><br></br>
   <% Category.all.each do |category|%>
   <p>
     <label for="category_id <%= category.id %>"><%= category.name %></label>
