@@ -49,4 +49,5 @@ application.scss:
     end
 
     Created new github branch, git checkout -b login
-    
+
+    # Make a counter so you can show which is most problem is most visited 

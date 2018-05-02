@@ -9,4 +9,9 @@ module CommentsHelper
     @comment.save
   end
 
+  def comment_user_email
+    @comment.name = User.find_by(id: current_user.id).email
+    @comment.save
+  end
+
 end
