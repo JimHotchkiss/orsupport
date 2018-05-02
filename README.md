@@ -50,4 +50,5 @@ application.scss:
 
     Created new github branch, git checkout -b login
 
-    # Make a counter so you can show which is most problem is most visited 
+    # Make a counter so you can show which is most problem is most visited: 
+    https://stackoverflow.com/questions/22402777/html-javascript-button-click-counter
