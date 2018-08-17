@@ -2,8 +2,15 @@
   <h2 class="index_title"><%= @category.name %></h2>
 </div>
 
+
+
 <% @category.issues.order('created_at DESC').each do |issue|%>
 <div class="post_wrapper">
+  <!-- counter box -->
+  <div class="main">
+    <button id="clickme">Click me: 0</button>
+  </div>
+  
   <h2 class="title"> <%= link_to issue.title, issue %></h2><br>
 
   <p class="date">
@@ -21,5 +28,14 @@
     <%= issue.solution %><br>
   </p>
 </div>
+
+<script>
+  var button = document.getElementById("clickme"),
+    count = 0;
+  button.onclick = function() {
+    count += 1;
+    button.innerHTML = "Click me: " + count;
+  };
+</script>
 
 <% end %>

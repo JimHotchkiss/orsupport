@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root "categories#index"
 
   get '/login' => "sessions#new"
-  get '/list' => "lists#index"
   post '/sessions' => "sessions#create"
   get '/logout' => "sessions#destroy"
 

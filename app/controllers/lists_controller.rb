@@ -1,4 +1,5 @@
 class ListsController < ApplicationController
   def index
-  end 
+    @issues = Issue.all
+  end
 end
