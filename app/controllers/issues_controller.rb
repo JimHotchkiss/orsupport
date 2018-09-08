@@ -42,6 +42,12 @@ class IssuesController < ApplicationController
     redirect_to issues_path
   end
 
+  def upvote
+    @issue = Issue.find(params[:id])
+    @issue.upvote_by current_user
+    redirect_to @issue
+  end
+
   private
   def issue_params
     params.require(:issue).permit(:title, :description, :solution, :category_ids => [])

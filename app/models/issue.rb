@@ -1,4 +1,5 @@
 class Issue < ApplicationRecord
+  acts_as_votable
   has_many :category_issues
   has_many :categories, through: :category_issues
   has_many :comments, dependent: :destroy

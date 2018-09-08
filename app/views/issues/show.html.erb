@@ -3,6 +3,12 @@
     <%= @issue.title %><br>
   </h1>
 
+
+    <%= link_to like_issue_path(@issue), method: :put do %>
+      Are you experiencing this?
+      <%= @issue.get_upvotes.size%>
+    <% end %>
+
   <p class="date">
     <i>Submitted <%= time_ago_in_words(@issue.created_at) %> Ago</i>
     <i>By <%= User.find_by(id: @issue.user_id).email %></i>
